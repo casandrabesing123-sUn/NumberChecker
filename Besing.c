@@ -1,19 +1,33 @@
 #include <stdio.h>
+#include <string.h>
 int main (){
-    // Check if the number is even or odd
+    //check if the number is even or odd
     int number;
-    printf("Enter any Number:");
-    scanf("%d", &number);
-    if(number % 2 == 0){
-        printf("%d Even number!",number);
+    char choice[10];
+    do
+    {
+        printf("Enter any number: ");
+        scanf("%d", &number);
+
+    if (number % 2 == 0)
+    {
+        printf("%d is an even number!", number);
     }else{
-        printf("%d Odd number!",number);
+        printf("%d is an odd number!", number);
     }
 
+    printf("\nDo you want to check another number? (Yes/No): ");
+    scanf("%s", choice);
+
+    
+    }while(strcmp(choice, "Yes") == 0);
+    printf("Thank you for using this program!");
 
 
-
-
-
-return 0;
+return 0;   
 }
+
+       
+
+    
+
